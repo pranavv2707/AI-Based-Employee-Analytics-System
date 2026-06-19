@@ -1,0 +1,11 @@
+flask #for the app setup
+mysql-connector-python #database - program connection
+faker # populate the db with fake data (for now)
+pandas #working with tables and data
+openpyxl #excel conversion
+streamlit #frontend library
+requests #api requests, jsonify
+langchain #RAG libraries
+langchain-google-genai
+langchain-community
+python-dotenv
