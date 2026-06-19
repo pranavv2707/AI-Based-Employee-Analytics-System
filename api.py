@@ -2,12 +2,14 @@ from flask import Flask, jsonify, request
 from mysql.connector import IntegrityError, Error
 from dotenv import load_dotenv
 import logging
+from errorlogs import logger
 from db import get_conn, initialise_db
 import re
 from datetime import datetime
 from rag.NLtoSQL import nl_to_sql
 from rag.resume_rag import ingest_resume, list_resumes, screen_candidates, compare_candidates, skill_gap_analysis, clear_resumes
 from rag.hr_rag import ingest_hr_doc, answer_hr_question, list_hr_docs, clear_hr_docs
+from errorlogs import logger
 
 load_dotenv()
 logger = logging.getLogger(__name__)
