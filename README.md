@@ -7,7 +7,7 @@ A full-stack HR analytics platform that lets you query employee data in plain En
 ## Tech Stack
 
 **Backend:** Flask, MySQL, LangChain, ChromaDB, PyMuPDF  
-**AI:** Groq (NL2SQL + embeddings), Gemini (resume screening + document analysis)  
+**AI:** Groq (NL2SQL + embeddings , resume screening + document analysis)  
 **Frontend:** Streamlit
 
 ---
@@ -18,10 +18,10 @@ A full-stack HR analytics platform that lets you query employee data in plain En
 Ask questions about employee data in plain English. Groq generates a validated SQL SELECT query using the injected schema, executes it against MySQL, and returns results as a data grid.
 
 ### Phase 2 — Resume Screener
-Upload multiple candidate PDFs. Each resume is parsed with PyMuPDF, chunked, embedded with Groq embeddings, and stored in ChromaDB. A screening question retrieves the most relevant chunks and passes them to Gemini, which returns a ranked answer with candidate names and reasoning.
+Upload multiple candidate PDFs. Each resume is parsed with PyMuPDF, chunked, embedded with Groq embeddings, and stored in ChromaDB. A screening question retrieves the most relevant chunks and passes them to Groq, which returns a ranked answer with candidate names and reasoning.
 
 ### Phase 3 — HR Document Analyser
-Upload HR policy documents, handbooks, or compliance PDFs. Same RAG pipeline as Phase 2 — PyMuPDF parsing, chunking, Groq embeddings, ChromaDB storage. Ask any question and Gemini returns a synthesized answer grounded in the actual document content.
+Upload HR policy documents, handbooks, or compliance PDFs. Same RAG pipeline as Phase 2 — PyMuPDF parsing, chunking, Groq embeddings, ChromaDB storage. Ask any question and Groq returns a synthesized answer grounded in the actual document content.
 
 ---
 
